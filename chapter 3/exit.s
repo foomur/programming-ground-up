@@ -22,7 +22,7 @@ _start:
 					# system.  Change this around and it will return different
 			       	        # things to echo $?
 
-  int $0x80				# this wakes up the kernel to run the exit command				
+int $0x80				# this wakes up the kernel to run the exit command				
 					
 					
 #TO RUN (from the command line):
