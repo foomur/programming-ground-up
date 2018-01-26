@@ -23,28 +23,28 @@ data_items:				# These are the data items
 .globl _start
 _start:
 	movl $0, %edi					# Move 0 into the index register
-	movl data_items(,%edi,4), %eax	# Load the first byte of data
+	movl data_items(,%edi,4), %eax			# Load the first byte of data
 	movl %eax, %ebx					# Since this is the first item, %eax is the biggest
 	
-	start_loop:						# Starts a loop
+	start_loop:					# Starts a loop
 		cmpl $0, %eax				# Checks if we are at the end
 		je loop_exit
-		incl %edi					# Load next value
+		incl %edi				# Load next value
 		movl data_items(,%edi,4), %eax
 		cmpl %ebx, %eax				# Compare values
 		jle start_loop				# Go back to start of loop if new value isn't bigger
-		movl %eax, %ebx				    # Move the value as the largest
-		jmp start_loop				      # jump to loop beginning
+		movl %eax, %ebx				# Move the value as the largest
+		jmp start_loop				# jump to loop beginning
 	
 	loop_exit:
 		
-		movl $1, %eax				        # 1 is the exit() syscall
-		int $0x80 					        # Send to Linux kernel
+		movl $1, %eax				# 1 is the exit() syscall
+		int $0x80 				# Send to Linux kernel
 					
 					
-#TO RUN:
-#			From the command line
-#			as maximum.s -o maximum.o     	# Assemble the program
-# 		ld maximum.o -o maximum			    # Link the file
-#			./maximum						            # Run the program
-#			echo $?							            # Should return 222
+#TO RUN (from the command line):
+#			
+#	as maximum.s -o maximum.o     	# Assemble the program
+# 	ld maximum.o -o maximum		# Link the file
+#	./maximum			# Run the program
+#	echo $?				# Should return 222
