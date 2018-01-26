@@ -1,3 +1,3 @@
 # Programming from the Ground Up 
-Exercises from the book "Programming from the Ground Up" by Josh Bartlett
+Solutions to the exercises from the book "Programming from the Ground Up" by Josh Bartlett.  
 
