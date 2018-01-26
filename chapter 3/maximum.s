@@ -9,7 +9,7 @@
 #					%ebx - Largest data item found
 #					%eax - Current data item
 #
-#				The following memory locations are used:
+#			The following memory locations are used:
 #					data_items - contains the item data.  A 0 is used to terminate the data
 
 
