@@ -1,9 +1,9 @@
-#PURPOSE: 	Program to illustrate how functions work
-# 		This program will compute the value of 2^3 + 5^2
-# 				   
-#
+#PURPOSE: 		Program to illustrate how functions work
+# 			This program will compute the value of 2^3 + 5^2
+ 				  
 #			Everything in the main program is stored in registers,
 #			so the data section doesn’t have anything.
+
 .code32           
 .section .data
 .section .text
@@ -27,7 +27,7 @@ _start:
 	addl %eax, %ebx	                 # add them together
 					 # the result is in %ebx
 	movl $1, %eax 	                 # exit (%ebx is returned)
-	int $0x80
+int $0x80
 	
 #PURPOSE: 		This function is used to compute the value of a number raised to a power
  				   				
