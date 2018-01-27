@@ -116,8 +116,6 @@ call convert_to_upper
 popl %eax #get the size back
 addl $4, %esp #restore %esp
 ###WRITE THE BLOCK OUT TO THE OUTPUT FILE###
-84
-Chapter 5. Dealing with Files
 #size of the buffer
 movl %eax, %edx
 movl $SYS_WRITE, %eax
@@ -147,8 +145,6 @@ int $LINUX_SYSCALL
 # conversion to upper case for a block
 #
 #INPUT: The first parameter is the location
-85
-Chapter 5. Dealing with Files
 # of the block of memory to convert
 # The second parameter is the length of
 # that buffer
