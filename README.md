@@ -10,6 +10,9 @@ Grab a copy here (it's open source):
 *	[maximum.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%203/maximum.s)  -  finding the largest number in a data index
 *	[minimum.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%203/minimum.s)  -  finding the smallest number in a data index
 
+## Chapter 4 - Functions
+
+*	[power.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%204/power.s)  -  illustrating how functions work by solving 2^3 + 5^2
 
 
 
