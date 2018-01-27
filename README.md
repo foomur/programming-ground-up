@@ -16,6 +16,12 @@ Grab a copy here (it's open source):
 *	[factorial.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%204/factorial.s)  -  solving a factorial by creating a function
 *	[square.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%204/square.s)  -  solving a square x^2 = ? by creating a function
 
+## Chapter 5 - Buffers & File Descriptors
+*	[toupper.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%205/toupper.s)  -  using buffers and file descriptors to change all lowercase letters of a file to all uppercase letters
+
+
+
+
 
 
 
