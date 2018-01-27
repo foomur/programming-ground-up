@@ -13,6 +13,8 @@ Grab a copy here (it's open source):
 ## Chapter 4 - Functions
 
 *	[power.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%204/power.s)  -  illustrating how functions work by solving 2^3 + 5^2
+*	[factorial.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%204/factorial.s)  -  solving a factorial by creating a function
+
 
 
 
