@@ -42,11 +42,9 @@ int $0x80
 #VARIABLES:
 # 			%ebx - holds the base number
 # 			%ecx - holds the power
-#
 # 			-4(%ebp) - holds the current result
-#
-# 			 %eax is used for temporary storage
-#
+# 			%eax is used for temporary storage
+
 
 .type power, @function
 power:
