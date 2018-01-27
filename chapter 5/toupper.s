@@ -210,5 +210,4 @@ ret
 #  To run, from the command line (Note, I'm using x86_64 so your assembly may be different)
 #             as --32 uppercase.s -o uppercase.o
 #             ld -melf_i386 uppercase.o -o uppercase
-#             ./uppercase
-#             echo $?
+#             ./toupper toupper.s toupper.uppercase  #changes all of touper.s to uppercase
