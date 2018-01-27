@@ -176,8 +176,6 @@ movl %esp, %ebp
 movl ST_BUFFER(%ebp), %eax
 movl ST_BUFFER_LEN(%ebp), %ebx
 movl $0, %edi
-86
-Chapter 5. Dealing with Files
 #if a buffer with zero length was given
 #to us, just leave
 cmpl $0, %ebx
