@@ -23,5 +23,12 @@ Grab a copy here (it's open source):
 
 *	[linux.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/linux.s)  -  common Linux definitions use .equ including syscalls, file descriptors, status codes, interrupts
 *	[record-def.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/record-def.s)  -  record offsets  
+*	[add-year.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/add-year.s)  -  add a year to each record
+*	[count-chars.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/count-chars.s)  -  function to count the number of characters in a record
+*	[read-record.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/read-record.s)  -  function to read a record
+*	[read-records.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/read-records.s)  -  final program to read all the records
+*	[write-newline.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/write-newline.s)  -  function to write a newline to STDOUT
+*	[write-record.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/write-record.s)  -  function to write in a record
+*	[write-records.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/write-records.s)  -  final program to write all the records
 
 
