@@ -170,3 +170,11 @@ ret
 movl $SYS_EXIT, %eax			#Exit the program
 movl $0, %ebx
 int $LINUX_SYSCALL
+
+
+# To run:  From the command line (NOTE:  I'm using an x86-64 build so you may need to assebmle differently)
+# Takes the file toupper.s, changes all lowercase to uppercase and saves as a new file toupper.uppercase
+#			as --32 write-records.s -o write-records.o
+#			as --32 write-record.s -o write-record.o
+#			ld -melf_i386 write-record.o write-records.o -o write-records
+#			./write-records
