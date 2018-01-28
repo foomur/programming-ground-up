@@ -31,7 +31,7 @@
 .equ STDOUT, 1
 .equ STDERR, 2
 
-#system call interrup
+#system call interrupt
 .equ LINUX_SYSCALL, 0x80
 
 .equ END_OF_FILE, 0		#return value of read when end of file
@@ -39,7 +39,7 @@
 
 
 .section .bss
-#Buffer - Data from inpuf file loaded into, 
+#Buffer - Data from input file loaded into, 
 #	  converted to uppercase and written
 #	  to output file
 .equ BUFFER_SIZE, 500
@@ -60,9 +60,12 @@
 
 .globl _start
 _start:
+
 ####Initialize program#####
 #save stack pointer
+
 movl %esp, %ebp
+
 # allocate space for file descriptors on the stack
 subl $ST_SIZE_RESERVE, %esp	#2 words
 
