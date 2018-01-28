@@ -21,4 +21,7 @@ Grab a copy here (it's open source):
 
 ## Chapter 6 - Reading and Writing Simple Records:
 
+*	[linux.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/linux.s)  -  common Linux definitions use .equ including syscalls, file descriptors, status codes, interrupts
+*	[record-def.s](https://github.com/foomur/programming-ground-up/blob/master/chapter%206/record-def.s)  -  record offsets  
+
 
