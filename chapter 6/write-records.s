@@ -105,6 +105,68 @@ movl $SYS_CLOSE, %eax			#Close file descriptor
 movl ST_FILE_DESCRIPTOR(%ebp), %ebx
 int $LINUX_SYSCALL
 
+#PURPUSE: This function writes a record to the given
+#	  the given file descriptor
+#
+#INPUT:   The file descriptor and a buffer
+#
+#OUTPUT:  This function produces a status code
+#
+#STACK LOCAL VARIABLES
+.equ ST_WRITE_BUFFER, 8
+.equ ST_FILEDESCRIPTOR, 12
+.section .text
+.globl write_record
+.type write_record,@function
+write_record:
+pushl %ebp				#Save base pointer	
+movl %esp, %ebp				#Set new base pointer
+
+pushl %ebx				#against c calling convention?
+movl $SYS_WRITE, %eax
+movl ST_FILEDESCRIPTOR(%ebp), %ebx
+movl ST_WRITE_BUFFER(%ebp), %ecx
+movl $RECORD_SIZE, %edx
+int $LINUX_SYSCALL
+
+popl %ebx
+
+movl %ebp, %esp
+popl %ebp
+ret
+#PURPOSE: This function reads a record from the file descriptor
+#
+#INPUT:	  The file descriptor and a buffer
+#
+#OUTPUT:  This function writes the data to the buffer 
+#	  and returns a status code.
+#
+#STACK LOCAL VARIABLES
+.equ ST_READ_BUFFER, 8
+.equ ST_FILEDES, 12
+.section .text
+.globl read_record
+.type read_record, @function
+
+read_record:
+pushl %ebp			#Save old base pointer
+movl %esp, %ebp			#Reset the base pointer
+
+pushl %ebx			#Save value of %ebx
+movl ST_FILEDES(%ebp), %ebx
+movl ST_READ_BUFFER(%ebp), %ecx
+movl $RECORD_SIZE, %edx		#Defined in record-def.s which 
+				#is included
+movl $SYS_READ, %eax
+int $LINUX_SYSCALL		#execute read command
+
+popl %ebx			#%eax has the return value, which we will
+				#give back to our calling programming
+
+movl %ebp, %esp			#Move the stack pointer back
+popl %ebp			#Restore previous base pointer
+ret
+
 movl $SYS_EXIT, %eax			#Exit the program
 movl $0, %ebx
 int $LINUX_SYSCALL
