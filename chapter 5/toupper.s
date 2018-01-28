@@ -10,7 +10,7 @@
 #			if the byte is lowercase letter,
 #			convert it to uppercase
 #		c) write the memory buffer to output file
-
+.code32
 .section .data
 
 ########CONSTANTS########
@@ -207,3 +207,10 @@ end_convert_loop:
 movl %ebp, %esp			#no return value, just leave
 popl %ebp
 ret
+
+
+# To run:  From the command line (NOTE:  I'm using an x86-64 build so you may need to assebmle differently)
+# Takes the file toupper.s, changes all lowercase to uppercase and saves as a new file toupper.uppercase
+#			as --32 toupper.s -o toupper.o
+#			ld -melf_i386 toupper.o -o toupper
+#			./toupper toupper.s toupper.uppercase     
