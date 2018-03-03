@@ -1,9 +1,9 @@
 #PURPOSE: Count the characters until a null byte is reached.
-
+#
 #INPUT:   The address of the character string
-
+#
 #OUTPUT: Returns the count in %eax
-
+#
 #PROCESS:
 #  Registers used:
 #	%ecx - chararcter count
